@@ -2571,6 +2571,8 @@ class IDE {
       settings.disable_poiomatic;
     $("#settings-dialog input[name=show_data_stats]")[0].checked =
       settings.show_data_stats;
+    $("#settings-dialog select[name=editor_preference]")[0].value =
+      settings.editor_preference;
     // export settings
     $("#settings-dialog input[name=export_image_scale]")[0].checked =
       settings.export_image_scale;
@@ -2654,6 +2656,9 @@ class IDE {
     settings.show_data_stats = $(
       "#settings-dialog input[name=show_data_stats]"
     )[0].checked;
+    settings.editor_preference =  $(
+      "#settings-dialog select[name=editor_preference]"
+    )[0].value;
     $(".crosshairs").toggle(settings.enable_crosshairs); // show/hide crosshairs
     settings.export_image_scale = $(
       "#settings-dialog input[name=export_image_scale]"
